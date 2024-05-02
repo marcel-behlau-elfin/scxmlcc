@@ -15,7 +15,7 @@ set (CMAKE_CXX_STANDARD 17)
 
 add_executable( hello_world
     hello_world.cpp
-    ${hello_gen_src} 
+    ${hello_gen_src}
     )
 
 add_executable( timer_switch
@@ -32,6 +32,9 @@ add_executable( microwave-02
     microwave-02.cpp
     ${microwave_gen_src}
     )
+
+add_library(testlib SHARED "")
+add_subdirectory(subfolder)
 
 add_executable( vending_machine
     vending_machine/coin_refund.cpp
